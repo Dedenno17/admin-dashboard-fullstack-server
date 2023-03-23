@@ -57,10 +57,9 @@ mongoose
   })
   .then(() => {
     console.log('connect to mongodb succesfully');
+    // listen when server run
+    app.listen(PORT, () => {
+      console.log(`server is running at ${PORT}`);
+    });
   })
   .catch((err) => console.log({ err }));
-
-// listen when server run
-app.listen(PORT, () => {
-  console.log(`server is running at ${PORT}`);
-});
